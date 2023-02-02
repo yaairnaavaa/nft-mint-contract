@@ -1,6 +1,7 @@
 CONTRATO INTELIGENTE PARA MINAR NFT’s en NEAR
 
 Versión de node: 12.22.5
+
 Versión de NEAR CLI: 3.4.2
 
 El siguiente contrato inteligente es un ejemplo del minado de NFT´s en NEAR Protocol, siga los siguientes pasos para compilar y desplegar el contrato.
@@ -8,6 +9,8 @@ El siguiente contrato inteligente es un ejemplo del minado de NFT´s en NEAR Pro
 Compilar y desplegar contrato Contrato:
 
     ./build.sh
+
+Una vez compilado y desplegado el contrato deberá cambiar el CONTRACT y USER_ACCOUNT por las correspondientes.
 
 CONTRACT=dev-1675279884701-60062749811064
 
