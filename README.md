@@ -12,7 +12,7 @@ Compilar y desplegar contrato Contrato:
 
 Una vez compilado y desplegado el contrato deberá cambiar el CONTRACT y USER_ACCOUNT por las correspondientes.
 
-CONTRACT=dev-1675279884701-60062749811064
+CONTRACT=dev-1675320396303-35160421272720
 
 USER_ACCOUNT=fakeyairnava.testnet
 
@@ -32,6 +32,10 @@ Minar con metadata
 Minar sin metadata
 
     near call $CONTRACT mint '{ "receiver_id": "'$USER_ACCOUNT'" }' --accountId $USER_ACCOUNT --deposit 0.01 --gas=300000000000000
+
+Consultar número de tokens minados
+
+    near view $CONTRACT nft_total_supply
 
 Consultar NFT por su ID
 
