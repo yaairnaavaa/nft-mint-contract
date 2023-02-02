@@ -12,9 +12,9 @@ Compilar y desplegar contrato Contrato:
 
 Una vez compilado y desplegado el contrato deberá cambiar el CONTRACT y USER_ACCOUNT por las correspondientes.
 
-CONTRACT=dev-1675320396303-35160421272720
+CONTRACT=dev-1675355294328-45182277418961
 
-USER_ACCOUNT=fakeyairnava.testnet
+USER_ACCOUNT=yairprueba1.testnet
 
 Inicializar contrato:
 
@@ -26,12 +26,12 @@ Mostrar metadata del contrato
 
 Minar con metadata
 
-    near call $CONTRACT nft_mint '{"receiver_id": "'$USER_ACCOUNT'", "metadata": {"title": "Mi NFT", "description": "Este NFT tiene metadata personalizada", "media": "https://bafybeiftczwrtyr3k7a2k4vutd3amkwsmaqyhrdzlhvpt33dyjivufqusq.ipfs.dweb.link/goteam-gif.gif"}}' --accountId $USER_ACCOUNT --amount 0.1 --gas=300000000000000
+    near call $CONTRACT nft_mint '{"receiver_id": "'$USER_ACCOUNT'", "metadata": {"title": "Mi NFT", "description": "Este NFT tiene metadata personalizada", "media": "https://bafybeiftczwrtyr3k7a2k4vutd3amkwsmaqyhrdzlhvpt33dyjivufqusq.ipfs.dweb.link/goteam-gif.gif"}}' --accountId $USER_ACCOUNT --amount 0.1 
 
 
 Minar sin metadata
 
-    near call $CONTRACT mint '{ "receiver_id": "'$USER_ACCOUNT'" }' --accountId $USER_ACCOUNT --deposit 0.01 --gas=300000000000000
+    near call $CONTRACT mint '{ "receiver_id": "'$USER_ACCOUNT'" }' --accountId $USER_ACCOUNT --deposit 0.01
 
 Consultar número de tokens minados
 
