@@ -144,4 +144,20 @@ impl Contract {
     
         return "El token fué minado con éxito".to_string();
     }
+
+    pub fn nft_update(&mut self, nft_id: TokenId, new_metadata: TokenMetadata) -> String {
+        let account_id = env::signer_account_id();
+        let token = self.tokens_by_id.get(&nft_id.clone());        
+        let owner_id = token.unwrap().owner_id.to_string();
+
+        if account_id.clone() != owner_id.clone().parse::<AccountId>().unwrap() {
+            env::panic_str("El NFT no te pertenece");
+        }
+
+        self.token_metadata_by_id.insert(&nft_id, &new_metadata);
+
+        "NFT Actualizado".to_string()
+
+    }
+
 }

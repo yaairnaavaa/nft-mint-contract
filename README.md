@@ -12,9 +12,9 @@ Compilar y desplegar contrato Contrato:
 
 Una vez compilado y desplegado el contrato deberá cambiar el CONTRACT y USER_ACCOUNT por las correspondientes.
 
-CONTRACT=dev-1675355294328-45182277418961
+CONTRACT=dev-1706919298520-70169149370455
 
-USER_ACCOUNT=yairprueba1.testnet
+USER_ACCOUNT=yairnava.testnet
 
 Inicializar contrato:
 
@@ -48,3 +48,7 @@ Consultar NFT's por segmento
 Consultar NFT's por segmento de un usuario
 
     near view $CONTRACT nft_tokens_for_owner '{"account_id": "yairnava.testnet", "from_index": "0", "limit": 50}' 
+
+Actualizar NFT
+
+    near call $CONTRACT nft_update '{"nft_id": "'2'", "new_metadata": {"title": "Mi NFT Actualizado", "description": "Este NFT tiene metadata personalizada", "media": "https://bafybeiftczwrtyr3k7a2k4vutd3amkwsmaqyhrdzlhvpt33dyjivufqusq.ipfs.dweb.link/goteam-gif.gif"}}' --accountId $USER_ACCOUNT
